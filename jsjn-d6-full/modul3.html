@@ -1,46 +1,45 @@
-<!doctype html>
-<html lang="ms">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Modul 3 — Aktiviti & Operasi</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Modul 3 - Aktiviti & Operasi</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand"><div class="logo">JSJN</div><div class="title">Modul 3 — Aktiviti & Operasi</div></div>
-    <nav style="margin-left:auto"><a href="index.html" class="btn-link">← Dashboard</a></nav>
-  </header>
-  <main class="container">
-    <div class="panel card" style="display:flex;gap:18px;flex-wrap:wrap">
-      <form id="opsForm" style="flex:1;min-width:320px">
-        <label>Nama Aktiviti<input type="text" id="ops_name" required></label>
-        <div style="display:flex;gap:8px">
-          <label>Tarikh<input type="date" id="ops_date" required></label>
-          <label>Masa<input type="time" id="ops_time" required></label>
-        </div>
-        <label>Lokasi<input type="text" id="ops_location"></label>
-        <label>Anggota Terlibat<select id="ops_members" multiple size="6"></select></label>
-        <div style="display:flex;gap:8px">
-          <label>Jumlah Kutipan<input type="number" id="ops_kutipan" min="0"></label>
-          <label>Jumlah Keluar<input type="number" id="ops_keluar" min="0"></label>
-        </div>
-        <label>Catatan<textarea id="ops_note" rows="3"></textarea></label>
-        <label>Upload Gambar<input type="file" id="ops_image" accept="image/*"></label>
-        <div style="margin-top:8px">
-          <button type="submit" class="primary">Simpan Lokal</button>
-          <button type="button" id="ops_sync">Sync → JSONBin</button>
-          <button type="button" id="ops_load">Muat dari JSONBin</button>
-          <button type="button" id="ops_export">Export JSON</button>
-        </div>
-      </form>
-      <div style="flex:1;min-width:320px">
-        <h3>Senarai Aktiviti</h3>
-        <div id="ops_status" class="muted">Status: idle</div>
-        <table id="ops_table" style="width:100%;margin-top:8px;background:white;border-radius:8px;overflow:hidden"></table>
-      </div>
-    </div>
-  </main>
-<script src="js/script.js"></script>
+  <div class="navbar">JSJN - Modul 3: Aktiviti & Operasi</div>
+  <div class="container">
+    <h2>Borang Aktiviti & Operasi</h2>
+    <form>
+      <label for="aktiviti">Nama Aktiviti / Operasi</label>
+      <input type="text" id="aktiviti" placeholder="Contoh: Ops Bersepadu Narkotik" required>
+
+      <label for="anggota">Anggota Terlibat (boleh pilih lebih dari 1)</label>
+      <select id="anggota" multiple size="8">
+        <option>IGP MAT SABU</option>
+        <option>DIGP BOND KASSIM</option>
+        <option>DIGP MAHMUD AJEMI</option>
+        <option>CP KHAPLA TELUR</option>
+        <option>SACP AHMAD PUTERA</option>
+        <option>SACP JO ZERO</option>
+        <option>DSP RIZMAN BARAN</option>
+        <option>DSP KIBIN LELAYANG</option>
+        <!-- sambung senarai penuh -->
+      </select>
+
+      <label for="kutipan">Jumlah Kutipan</label>
+      <input type="number" id="kutipan" placeholder="RM0.00">
+
+      <label for="keluar">Jumlah Keluar</label>
+      <input type="number" id="keluar" placeholder="RM0.00">
+
+      <label for="catatan">Catatan</label>
+      <textarea id="catatan" rows="4" placeholder="Nyatakan catatan operasi..."></textarea>
+
+      <label for="gambar">Lampiran Gambar</label>
+      <input type="file" id="gambar" accept="image/*">
+
+      <button type="submit">Hantar Aktiviti</button>
+    </form>
+  </div>
 </body>
 </html>
