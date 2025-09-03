@@ -1,37 +1,32 @@
-<!doctype html>
-<html lang="ms">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>JSJN — Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>JSJN Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand"><div class="logo">JSJN</div><div class="title">Sistem JSJN</div></div>
-  </header>
-
-  <main class="container">
-    <section class="dashboard">
-      <div class="card" data-href="modul1.html">
-        <h3>Modul 1</h3>
+  <div class="navbar">JSJN DASHBOARD</div>
+  <div class="container">
+    <h1>Selamat Datang</h1>
+    <p>Pilih modul di bawah:</p>
+    <div class="card-grid">
+      <div class="card">
+        <h2>Modul 1</h2>
         <p>Sistem Cuti</p>
+        <button onclick="location.href='modul1.html'">Buka Modul</button>
       </div>
-      <div class="card" data-href="modul2.html">
-        <h3>Modul 2</h3>
+      <div class="card">
+        <h2>Modul 2</h2>
         <p>Laporan Tangkapan</p>
+        <button onclick="location.href='modul2.html'">Buka Modul</button>
       </div>
-      <div class="card" data-href="modul3.html">
-        <h3>Modul 3</h3>
-        <p>Aktiviti &amp; Operasi</p>
+      <div class="card">
+        <h2>Modul 3</h2>
+        <p>Aktiviti & Operasi</p>
+        <button onclick="location.href='modul3.html'">Buka Modul</button>
       </div>
-    </section>
-
-    <footer class="foot">Hosted: Local preview · JSONBin BIN preconfigured</footer>
-  </main>
-
-  <script>
-  document.querySelectorAll('.card').forEach(c => c.addEventListener('click', ()=> window.location = c.dataset.href));
-  </script>
+    </div>
+  </div>
 </body>
 </html>
