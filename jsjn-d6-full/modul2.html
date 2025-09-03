@@ -1,38 +1,65 @@
-<!doctype html>
-<html lang="ms">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Modul 2 — Laporan Tangkapan</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Modul 2 - Laporan Tangkapan</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand"><div class="logo">JSJN</div><div class="title">Modul 2 — Laporan Tangkapan</div></div>
-    <nav style="margin-left:auto"><a href="index.html" class="btn-link">← Dashboard</a></nav>
-  </header>
-  <main class="container">
-    <div class="panel card" style="display:flex;gap:18px;flex-wrap:wrap">
-      <form id="tangkapanForm" style="flex:1;min-width:320px">
-        <label>Nama OKT<input type="text" id="okt_nama" required></label>
-        <label>Lokasi<select id="tangkapan_lokasi"></select></label>
-        <label>Pegawai<select id="tangkapan_pegawai"></select></label>
-        <div id="drug_area"></div>
-        <div style="margin-top:8px">
-          <button type="button" id="addDrug" class="primary">+ Tambah Jenis Dadah</button>
-          <button type="submit">Simpan Lokal</button>
-          <button type="button" id="tangkapan_sync">Sync → JSONBin</button>
-          <button type="button" id="tangkapan_load">Muat dari JSONBin</button>
-          <button type="button" id="tangkapan_export">Export JSON</button>
-        </div>
-      </form>
-      <div style="flex:1;min-width:320px">
-        <h3>Senarai Tangkapan</h3>
-        <div id="tangkapan_status" class="muted">Status: idle</div>
-        <table id="tangkapan_table" style="width:100%;margin-top:8px;background:white;border-radius:8px;overflow:hidden"></table>
-      </div>
-    </div>
-  </main>
-<script src="js/script.js"></script>
+  <div class="navbar">JSJN - Modul 2: Laporan Tangkapan</div>
+  <div class="container">
+    <h2>Borang Laporan Tangkapan</h2>
+    <form>
+      <label for="okt">Nama OKT</label>
+      <input type="text" id="okt" placeholder="Nama Orang Kena Tahan" required>
+
+      <label for="lokasi">Lokasi Tangkapan</label>
+      <select id="lokasi" required>
+        <option value="">-- Pilih Lokasi --</option>
+        <option>Weed Farm</option>
+        <option>Humane Lab</option>
+        <option>Heroine Felda</option>
+        <option>Cocaine Felda</option>
+        <option>Heroine Sandy Shore</option>
+        <option>Ammonium Chlorite Processing</option>
+        <option>Cocaine Bandar</option>
+        <option>Joint Lab</option>
+        <option>Morphine Lab</option>
+        <option>Poppy Farm</option>
+        <option>Coke Leaf Farm</option>
+      </select>
+
+      <label for="pegawai">Pegawai Tangkapan</label>
+      <select id="pegawai" required>
+        <option value="">-- Pilih Pegawai --</option>
+        <option>IGP MAT SABU</option>
+        <option>DIGP BOND KASSIM</option>
+        <option>DIGP MAHMUD AJEMI</option>
+        <option>CP KHAPLA TELUR</option>
+        <option>SACP AHMAD PUTERA</option>
+        <option>SACP JO ZERO</option>
+        <option>DSP RIZMAN BARAN</option>
+        <option>DSP KIBIN LELAYANG</option>
+        <option>DSP ANUAR ASYRAF</option>
+        <option>ASP MAD ALAI</option>
+        <option>ASP EMBUN KASIH</option>
+        <option>ASP REJAB SAAD</option>
+        <option>ASP TRISYA SINCLAIR</option>
+        <option>ASP ABDUL SANI</option>
+        <option>ASP TYRA HAZEL</option>
+        <option>SM NAYLA DAWSON</option>
+        <option>KPL KAPLA YENDA</option>
+        <option>INSP TED GRAVENBACH</option>
+        <option>INSP RANI KULUP</option>
+        <option>INSP AKI`R</option>
+        <!-- sambung senarai penuh -->
+      </select>
+
+      <label for="dadah">Jenis & Kuantiti Dadah</label>
+      <textarea id="dadah" rows="3" placeholder="Contoh: Weed bud - 20g, Cocaine - 2kg" required></textarea>
+
+      <button type="submit">Hantar Laporan</button>
+    </form>
+  </div>
 </body>
 </html>
