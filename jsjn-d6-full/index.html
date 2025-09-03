@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JSJN — Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="logo">JSJN</div><div class="title">Sistem JSJN</div></div>
+  </header>
+
+  <main class="container">
+    <section class="dashboard">
+      <div class="card" data-href="modul1.html">
+        <h3>Modul 1</h3>
+        <p>Sistem Cuti</p>
+      </div>
+      <div class="card" data-href="modul2.html">
+        <h3>Modul 2</h3>
+        <p>Laporan Tangkapan</p>
+      </div>
+      <div class="card" data-href="modul3.html">
+        <h3>Modul 3</h3>
+        <p>Aktiviti &amp; Operasi</p>
+      </div>
+    </section>
+
+    <footer class="foot">Hosted: Local preview · JSONBin BIN preconfigured</footer>
+  </main>
+
+  <script>
+  document.querySelectorAll('.card').forEach(c => c.addEventListener('click', ()=> window.location = c.dataset.href));
+  </script>
+</body>
+</html>

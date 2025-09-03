@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Modul 2 — Laporan Tangkapan</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="logo">JSJN</div><div class="title">Modul 2 — Laporan Tangkapan</div></div>
+    <nav style="margin-left:auto"><a href="index.html" class="btn-link">← Dashboard</a></nav>
+  </header>
+  <main class="container">
+    <div class="panel card" style="display:flex;gap:18px;flex-wrap:wrap">
+      <form id="tangkapanForm" style="flex:1;min-width:320px">
+        <label>Nama OKT<input type="text" id="okt_nama" required></label>
+        <label>Lokasi<select id="tangkapan_lokasi"></select></label>
+        <label>Pegawai<select id="tangkapan_pegawai"></select></label>
+        <div id="drug_area"></div>
+        <div style="margin-top:8px">
+          <button type="button" id="addDrug" class="primary">+ Tambah Jenis Dadah</button>
+          <button type="submit">Simpan Lokal</button>
+          <button type="button" id="tangkapan_sync">Sync → JSONBin</button>
+          <button type="button" id="tangkapan_load">Muat dari JSONBin</button>
+          <button type="button" id="tangkapan_export">Export JSON</button>
+        </div>
+      </form>
+      <div style="flex:1;min-width:320px">
+        <h3>Senarai Tangkapan</h3>
+        <div id="tangkapan_status" class="muted">Status: idle</div>
+        <table id="tangkapan_table" style="width:100%;margin-top:8px;background:white;border-radius:8px;overflow:hidden"></table>
+      </div>
+    </div>
+  </main>
+<script src="js/script.js"></script>
+</body>
+</html>

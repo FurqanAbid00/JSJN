@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Modul 1 — Sistem Cuti</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="logo">JSJN</div><div class="title">Modul 1 — Sistem Cuti</div></div>
+    <nav style="margin-left:auto"><a href="index.html" class="btn-link">← Dashboard</a></nav>
+  </header>
+  <main class="container">
+    <div class="panel card" style="display:flex;gap:18px;flex-wrap:wrap">
+      <form id="cutiForm" style="flex:1;min-width:300px">
+        <label>Nama Anggota<select id="cuti_nama"></select></label><br>
+        <label>Jenis Cuti<select id="cuti_jenis"><option>Tahunan</option><option>Sakit</option><option>Kecemasan</option><option>Tanpa Gaji</option></select></label><br>
+        <div style="display:flex;gap:8px">
+          <label>Tarikh Mula<input type="date" id="cuti_mula" required></label>
+          <label>Tarikh Tamat<input type="date" id="cuti_tamat" required></label>
+        </div>
+        <label>Jumlah Hari<input type="number" id="cuti_jumlah" min="1"></label>
+        <label>Sebab (optional)<input type="text" id="cuti_sebab"></label>
+        <div style="margin-top:8px">
+          <button type="submit" class="primary">Simpan Lokal</button>
+          <button type="button" id="cuti_sync">Sync → JSONBin</button>
+          <button type="button" id="cuti_load">Muat dari JSONBin</button>
+          <button type="button" id="cuti_export">Export JSON</button>
+        </div>
+      </form>
+
+      <div style="flex:1;min-width:320px">
+        <h3>Senarai Cuti</h3>
+        <div id="cuti_status" class="muted">Status: idle</div>
+        <table id="cuti_table" style="width:100%;margin-top:8px;background:white;border-radius:8px;overflow:hidden"></table>
+      </div>
+    </div>
+  </main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
