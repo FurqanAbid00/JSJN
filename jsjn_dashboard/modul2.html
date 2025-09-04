@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modul 2 - Laporan Tangkapan</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Modul 2: Laporan Tangkapan</h1>
+    <form id="tangkapanForm">
+      <label>Nama OKT</label>
+      <input type="text" name="okt" required />
+
+      <label>Lokasi Tangkapan</label>
+      <select name="lokasi" required>
+        <option value="">-- Pilih Lokasi --</option>
+        <option>Weed Farm</option>
+        <option>Humane Lab</option>
+        <option>Heroine Felda</option>
+        <option>Cocaine Felda</option>
+        <option>Heroine Sandy Shore</option>
+        <option>Ammonium Chlorite Processing</option>
+        <option>Cocaine Bandar</option>
+        <option>Joint Lab</option>
+        <option>Morphine Lab</option>
+        <option>Poppy Farm</option>
+        <option>Coke Leaf Farm</option>
+      </select>
+
+      <label>Pegawai Tangkapan</label>
+      <input type="text" name="pegawai" required />
+
+      <label>Kuantiti Dadah</label>
+      <textarea name="kuantiti" rows="3" placeholder="cth: 2kg cocaine, 5 joint"></textarea>
+
+      <button type="submit">Hantar</button>
+    </form>
+    <br />
+    <a href="index.html">⬅ Kembali Dashboard</a>
+  </div>
+</body>
+</html>
